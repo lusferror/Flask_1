@@ -36,7 +36,7 @@ def get_user(id):
         return jsonify({"msg":"user not found"}),404
 
 @app.route('/user',methods=['POST'])
-def inser_user():
+def insert_user():
     try:
         user= User()
         user.name = request.json.get("name")
